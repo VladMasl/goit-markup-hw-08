@@ -1,10 +1,6 @@
-
-    
-
-
-
 .header {
-    position: fixed;
+    position: relative;
+    // position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -14,41 +10,52 @@
 }
 
 .container {
-    display: flex;
+    display: block;
     align-items: center;
 
 }
 
 .header__nav {
+
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
 }
 
 .site-nav {
-    margin: auto;
-    margin-left: 95px;
-    display: flex;
+    // margin: auto;
+    // margin-left: 95px;
+    // display: flex;
 
 
-&__item {
-    margin-right: 50px;
-}
+    &__item {
+        // margin-right: 50px;
+    }
+
     &:last-child {
-        margin-right: 0;
+        // margin-right: 0;
     }
 }
 
 
 .site-nav__link {
-    position: relative;
+
+    // position: relative;
+    @media screen and (min-width: $tablet) {
+        padding: 32px 0px;
+        font-size: 14px;
+        line-height: 1.14;
+       
+    }
+
     display: block;
-    padding: 32px 0px;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 40px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     text-decoration: none;
-    color:$title-Tcolor;
+    color: $title-Tcolor;
 
     transition-property: color;
     transition-duration: $transition;
@@ -59,11 +66,12 @@
         color: $accent-color;
     }
 
-    &.current{
+    &.current {
         color: $accent-color;
     }
 }
-.auth-nav__info{
+
+.auth-nav__info {
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
@@ -71,24 +79,25 @@
     letter-spacing: 0.02em;
 
 }
+
 .auth-nav {
-    margin-left: auto;
-    display: flex;
-    align-items: baseline;
+    // margin-left: auto;
+    // display: flex;
+    // align-items: baseline;
     margin-top: 0;
     margin-bottom: 0;
 
-    &__info{
+    &__info {
         text-decoration: none;
         font-weight: 500;
         font-size: 14px;
         line-height: 1.14;
         letter-spacing: 0.02em;
-        color:$primary-Tcolor;
-      
+        color: $primary-Tcolor;
+
         transition-property: color;
         transition-duration: $transition;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     }
 
@@ -96,55 +105,109 @@
     &:hover {
         color: $accent-color;
     }
-    &__item+&__item{
-    margin-left: 50px;
+
+
+    &__item+&__item {
+
+
+        // margin-left: 50px;
+
+
+
+    }
+
+    &__icon {
+
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+
+        margin-right: 10px;
+        fill: $primary-Tcolor;
+
+        transition-property: fill;
+        transition-duration: $transition;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+
+
+    }
+
+    &__smartphone {
+        margin-bottom: -3px;
+
+    }
+
+    &__envelope {
+        margin-bottom: -1px;
+    }
+
 }
 
-&__icon{
-    margin-right: 10px;
-    fill: $primary-Tcolor;
-  
-    transition-property: fill;
-    transition-duration: $transition;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
-}
-&__smartphone {
-    margin-bottom: -3px;
-  
-  }
-  
-  &__envelope {
-    margin-bottom: -1px;
-  }
-
-}
-
-.auth-nav__info{
+.auth-nav__info {
 
     &:hover,
-    &:focus{
+    &:focus {
         color: $accent-color;
     }
 
     &:hover .auth-nav__icon,
-    &:focus .auth-nav__icon{
+    &:focus .auth-nav__icon {
         fill: $accent-color;
-    } 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .current {
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: $accent-color;
+        }
+
+    }
 }
 
 
-.current {
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        display: block;
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
-        background-color: $accent-color;
+
+.button-mobmenu {
+    position: relative;
+    z-index: 55;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    transition-property: fill;
+    transition-duration: $transition;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+
+    &:hover {
+        fill: $accent-color;
     }
 
+
+}
+
+
+
+
+.button-mobmenu .icon-mobmenu {
+    display: none;
+}
+
+.button-mobmenu.is-open .icon-mobmenu {
+    display: block;
+}
+
+.button-mobmenu.is-open .icon-mobclose {
+    display: none;
 }
