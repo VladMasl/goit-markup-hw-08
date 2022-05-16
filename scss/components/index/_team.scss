@@ -1,5 +1,16 @@
 .team {
 
+    & img{
+       
+        @media screen and (min-width: 767px){
+            width: 354px;
+        }
+        @media screen and (min-width: 1200px){
+            width: 270px;
+        }
+        width:450px ;
+    }
+
     background-color: $primary-Buttcolor;
 
     &__title {
@@ -16,6 +27,20 @@
     }
 
     &__list {
+        @media screen and (max-width: 767px) {
+        display: block; }
+
+        @media screen and (min-width: 768px) {
+         
+        @media screen and (max-width: 1199px) {
+            justify-content: center;
+            margin: -15px;
+            flex-wrap: wrap; 
+        }
+       
+    }
+
+
         margin-top: 0;
         margin-bottom: 0;
         text-align: center;
@@ -29,9 +54,25 @@
         box-shadow: (0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2));
         background-color: $footer-Acolor;
 
-        &:not(:last-child) {
-            margin-right: 30px;
-        }
+        @media screen and (max-width: 767px) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+            }
+
+            @media screen and (min-width: 768px) {
+                @media screen and (max-width: 1199px){
+                    margin: 15px;
+                }
+                }
+
+            @media screen and (min-width: 1199px){ 
+                &:not(:last-child) {
+                margin-right: 30px;
+            }
+
+            }
+      
     }
 
     &__works {

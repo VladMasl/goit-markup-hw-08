@@ -1,6 +1,5 @@
 .header {
-    position: relative;
-    // position: fixed;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -9,50 +8,58 @@
     border-bottom: 1px solid #eeeeee;
 }
 
-.container {
-    display: block;
-    align-items: center;
+.page-header {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
+
 
 }
 
 .header__nav {
+    @media screen and (max-width: 768px) {
+        justify-content: space-between;
+        height: 60px;
+    }
 
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    min-height: 80px;
 }
 
 .site-nav {
-    // margin: auto;
-    // margin-left: 95px;
-    // display: flex;
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        margin-left: 88px;
+    }
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+  
+
+    margin: auto;
+    margin-left: 95px;
+    display: flex;
 
 
     &__item {
-        // margin-right: 50px;
+        margin-right: 50px;
     }
 
     &:last-child {
-        // margin-right: 0;
+        margin-right: 0;
     }
 }
 
 
 .site-nav__link {
-
-    // position: relative;
-    @media screen and (min-width: $tablet) {
-        padding: 32px 0px;
-        font-size: 14px;
-        line-height: 1.14;
-       
-    }
-
+    position: relative;
     display: block;
+    padding: 32px 0px;
     font-weight: 500;
-    font-size: 40px;
-    line-height: 1.17;
+    font-size: 14px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
     color: $title-Tcolor;
@@ -81,9 +88,20 @@
 }
 
 .auth-nav {
-    // margin-left: auto;
-    // display: flex;
-    // align-items: baseline;
+
+    @media screen and (max-width: 1200px) {
+        display: block;
+    }
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+   
+
+    margin-left: auto;
+    display: flex;
+    align-items: baseline;
     margin-top: 0;
     margin-bottom: 0;
 
@@ -106,21 +124,23 @@
         color: $accent-color;
     }
 
-
-    &__item+&__item {
-
-
-        // margin-left: 50px;
-
-
-
+    @media screen and (min-width: 1200px) {
+        &__item+&__item {
+            margin-left: 50px;
+        }
     }
+
+    &__item {
+        &:nth-child(1) {
+            margin-bottom: 10px;
+        }
+    }
+
+
+
 
     &__icon {
 
-        @media screen and (max-width: $tablet) {
-            display: none;
-        }
 
         margin-right: 10px;
         fill: $primary-Tcolor;
@@ -128,8 +148,6 @@
         transition-property: fill;
         transition-duration: $transition;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-
 
     }
 
@@ -157,57 +175,18 @@
     }
 }
 
-@media screen and (min-width: 768px) {
-    .current {
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            display: block;
-            width: 100%;
-            height: 4px;
-            border-radius: 2px;
-            background-color: $accent-color;
-        }
 
-    }
-}
-
-
-
-.button-mobmenu {
-    position: relative;
-    z-index: 55;
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-
-    transition-property: fill;
-    transition-duration: $transition;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-
-    &:hover {
-        fill: $accent-color;
+.current {
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $accent-color;
     }
 
-
-}
-
-
-
-
-.button-mobmenu .icon-mobmenu {
-    display: none;
-}
-
-.button-mobmenu.is-open .icon-mobmenu {
-    display: block;
-}
-
-.button-mobmenu.is-open .icon-mobclose {
-    display: none;
 }

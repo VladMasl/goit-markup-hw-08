@@ -11,15 +11,50 @@
 
     &__list {
         display: flex;
-    }
+
+    
+                @media screen and (max-width: 1199px) {
+                    justify-content: center;
+                    margin: -15px;
+                    flex-wrap: wrap; 
+                }
+               
+         }
+
 
     &__group {
-        &:not(:last-child) {
-            margin-right: 30px;
-        }
+        @media screen and (max-width: 767px) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+            }
+
+         
+                @media screen and (max-width: 1199px){
+                    margin: 15px;
+                }
+             
+
+            @media screen and (min-width: 1199px){ 
+                &:not(:last-child) {
+                margin-right: 30px;
+            }
+
+            }
     }
 
     &__link {
+        @media screen and (max-width: 1199px){
+            width: 226px;
+        }
+
+        @media screen and (max-width: 767px){
+            width: 210px;
+             
+        }
+
+
+
         display: flex;
         justify-content: center;
         width: 170px;

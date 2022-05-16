@@ -20,22 +20,20 @@
   <!-- верхняя линия -->
   <header class="header">
 
-    <div class="container">
+    <div class="container  page-header">
 
       <nav class="header__nav">
 
         <a href="" class="header__logo"><span class="header__web">Web</span>Studio</a>
+        <button class="button-mobmenu js-open-menu" 
+        aria-expanded="false"
+        aria-controls="mob-menu"
+         type="button">
+          <svg  width="40px" height="40px" >
+            <use href="./images/icons.svg.svg#icon-mobmenu"></use>
+          </svg>
+        </button>
 
-        <button type="button" class="button-mobmenu is-open" data-menu-button aria-expanded="false">
-          <svg class="mobmenu" width="40px" height="40px" aria-label="переключатель мобильного меню">
- 
-            
-            <use class="icon-mobclose" href="./images/icons.svg.svg#icon-mobclose" ></use>
-            <use class="icon-mobmenu" href="./images/icons.svg.svg#icon-mobmenu"></use>
-          </svg> </button>
-
-       
-          <div class="menu-container" data-menu>
         <ul class="site-nav">
 
           <li class="site-nav__item"><a href="./index.html" class="site-nav__link current ">Студия</a></li>
@@ -45,7 +43,7 @@
           </li>
           <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
         </ul>
-     
+      </nav>
 
       <ul class="auth-nav ">
 
@@ -67,15 +65,61 @@
         </li>
       </ul>
     </div>
-  
-    </nav>
-    </div>
   </header>
   <main>
+
+    <!-- мобильное меню -->
+
+    <div class="mob-menu js-menu-container" id="mob-menu" >
+ 
+      <button class="button-mobmenu close js-close-menu"  type="button">
+        <svg  width="40px" height="40px" >
+          <use href="./images/icons.svg.svg#icon-mobclose"></use>
+        </svg>
+      </button>
+
+      <nav>
+        <ul class="mob-nav">
+
+          <li class="mob-nav__item"><a href="./index.html" class="mob-nav__link current ">Студия</a></li>
+
+          <li class="mob-nav__item">
+            <a href="./portfolio.html" class="mob-nav__link ">Портфолио</a>
+          </li>
+          <li class="mob-nav__item"><a href="" class="mob-nav__link">Контакты</a></li>
+        </ul>
+
+        <ul class="contacts">
+          <li class=" contacts__item ">
+            <a href="+380961111111" class="contacts__tel">+38 096 111 11 11</a>
+          </li>
+          <li class=" contacts__item ">
+
+            <a href="info@devstudio.com" class="contacts__info">info@devstudio.com</a>
+          </li>
+        </ul>
+        
+        <ul class="mob-media">
+        <li class="mob-media__item">
+          <a href="" class="mob-media__link">Instagram</a>
+        </li>
+        <li class="mob-media__item">
+          <a href="" class="mob-media__link sol">Twitter</a>
+        </li>
+        <li class="mob-media__item">
+          <a href="" class="mob-media__link sol">Facebook</a>
+        </li>
+        <li class="mob-media__item">
+          <a href="" class="mob-media__link sol">LinkedIn</a>
+        </li>
+      </ul>
+        
+      </nav>
+    </div>
     <!-- шапка -->
 
     <section class="heroes">
-      <div class="heroes__section container">
+      <div class="heroes__section">
 
         <h1 class="heroes__header">
 
@@ -161,7 +205,11 @@
 
             <div class="performance__card">
 
-              <img src="images/box1.jpg" alt="процес работы" width="370" />
+              <img  srcset="
+
+              ./images/box.370x294.jpg 1x, 
+              ./images/box.740x588.jpg 2x"
+              src="./images/box.370x294.jpg" alt="процес работы" width="370" />
 
               <div class="performance__fon">
 
@@ -173,7 +221,11 @@
 
           <li class="performance__description">
             <div class="performance__card">
-              <img src="images/bo2.jpg" alt="процес работы" width="370" />
+              <img  srcset="
+
+              ./images/box1.370x294.jpg 1x, 
+              ./images/box1.740x588.jpg 2x"
+              src=" ./images/box1.370x294.jpg" alt="процес работы" width="370" />
 
               <div class="performance__fon">
                 <p class=" performance__img-text">Мобильные приложения</p>
@@ -183,7 +235,11 @@
 
           <li class="performance__description">
             <div class="performance__card">
-              <img src="images/bo3.jpg" alt="процес работы" width="370" />
+              <img  srcset="
+
+              ./images/box2.370x294.jpg 1x, 
+              ./images/box2.740x588.jpg 2x"
+              src=" ./images/box2.370x294.jpg" alt="процес работы" width="370" />
 
               <div class="performance__fon">
                 <p class=" performance__img-text">Дизайнерские решения</p>
@@ -202,7 +258,16 @@
 
           <li class="team__description">
 
-            <img src="images/img.jpg" alt="фото сотрудника" width="270" />
+            <img srcset="
+
+            ./images/img.270.jpg 1x,
+            ./images/img.540.jpg 2x
+            "
+
+              src="./images/img.270.jpg" 
+              alt="фото сотрудника"
+              />
+                
             <div class="team__works ">
 
               <h3 class="team__employee">Игорь Демьяненко</h3>
@@ -250,7 +315,12 @@
           </li>
 
           <li class="team__description">
-            <img src="images/img1.jpg" alt="фото сотрудника" width="270" />
+            <img srcset="
+            ./images/img1.270.jpg 1x, 
+            ./images/img1.540.jpg 2x " 
+          
+
+             src="./images/img1.270.jpg" alt="фото сотрудника"/>
             <div class="team__works">
               <h3 class="team__employee">Ольга Репина</h3>
               <p class="team__speciality" lang="en">Frontend Developer</p>
@@ -295,7 +365,13 @@
           </li>
 
           <li class="team__description">
-            <img src="images/img2.jpg" alt="фото сотрудника" width="270" />
+          <img srcset="
+          ./images/img2.270.jpg  1x, 
+          ./images/img2.540.jpg  2x
+        "
+
+           src="./images/img2.270.jpg" alt="фото сотрудника" />
+          
             <div class="team__works">
               <h3 class="team__employee">Николай Тарасов</h3>
               <p class="team__speciality" lang="en">Marketing</p>
@@ -340,7 +416,14 @@
           </li>
 
           <li class="team__description">
-            <img src="images/img3.jpg" alt="фото сотрудника" width="270" />
+            <img srcset="
+
+            ./images/img3.270.jpg  1x, 
+            ./images/img3.540.jpg  2x"
+           
+
+            src=" ./images/img3.270.jpg" alt="фото сотрудника"  
+          />
             <div class="team__works">
               <h3 class="team__employee">Михаил Ермаков</h3>
               <p class="team__speciality" lang="en">UI Designer</p>

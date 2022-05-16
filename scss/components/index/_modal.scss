@@ -1,5 +1,3 @@
-
-
 .backdrop {
     position: fixed;
     top: 0;
@@ -22,14 +20,29 @@
 }
 
 .modal {
+    @media screen and (max-width: 1200px) {
+        max-width: 450px;
+        max-height: 609px;
+    }
+    @media screen and (min-width: 300px)and (max-width: 479px){
+        top: 55%;
+        width: 365px;
+        padding-bottom: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+    }
+
+ 
+
     position: absolute;
     top: 50%;
     left: 50%;
 
     transform: translate(-50%, -50%);
     padding: 40px;
-    min-width: 528px;
-    min-height: 581px;
+    width: 528px;
+    height: 581px;
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     background-color: $primary-Wcolor;
@@ -72,6 +85,13 @@
 
 
         & h2 {
+            @media screen and (max-width: 1200px){
+                text-align: center;
+            }
+            @media screen and (min-width: 300px)and (max-width: 479px){
+                font-size: 18px;
+            } 
+
             font-weight: 700;
             font-size: 20px;
             margin-bottom: 12px;
@@ -86,10 +106,26 @@
 }
 
 .form {
+    @media screen and (max-width: 1200px) {
+        width: 370px;
+        height: 345px;                  
+    }
+    @media screen and (min-width: 300px)and (max-width: 479px){
+        width: 345px;
+    } 
+
     width: 448px;
     height: 342px;
 
     &__field {
+
+        @media screen and (max-width: 1200px) {
+            width: 370px;
+             
+          }
+          @media screen and (min-width: 300px)and (max-width: 479px){
+            width: 345px;
+        } 
 
         position: relative;
         display: flex;
@@ -138,6 +174,14 @@
     }
 
     &__input {
+        @media screen and (max-width: 1200px) {
+            width: 370px;
+             }
+
+             @media screen and (min-width: 300px)and (max-width: 479px){
+                width: 345px;
+            } 
+
         padding: 12px 42px;
         height: 40px;
         border: 1px solid rgba(33, 33, 33, 0.2);
@@ -205,12 +249,28 @@
     }
 
     &__text {
+        @media screen and (max-width: 1200px) {
+            font-size: 12px;
+            line-height: 1.16; 
+          
+          }
+          @media screen and (min-width: 300px)and (max-width: 479px){
+            font-size: 10px;
+            line-height: 1.15; 
+        } 
+
         font-weight: 400;
         font-size: 14px;
         line-height: 1.71;
         letter-spacing: 0.03em;
 
         &::before {
+            @media screen and (max-width: 1200px){
+                left: -5px;  
+            }
+            @media screen and (min-width: 300px)and (max-width: 479px){
+                left: 5px; 
+            } 
             position: absolute;
             content: "";
             top: 50%;
@@ -271,3 +331,4 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     }
 }
+

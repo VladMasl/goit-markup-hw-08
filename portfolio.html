@@ -22,19 +22,26 @@
   <!-- верхняя линия -->
   <header class="header">
 
-    <div class="container">
+    <div class="container page-header">
 
       <nav class="header__nav">
 
         <a href="" class="header__logo"><span class="header__web">Web</span>Studio</a>
-
+        <button class="button-mobmenu js-open-menu" 
+        aria-expanded="false"
+        aria-controls="mob-menu"
+         type="button">
+          <svg  width="40px" height="40px" >
+            <use href="./images/icons.svg.svg#icon-mobmenu"></use>
+          </svg>
+        </button>
 
         <ul class="site-nav">
 
           <li class="site-nav__item"><a href="./index.html" class="site-nav__link  ">Студия</a></li>
 
           <li class="site-nav__item">
-            <a href="./portfolio.html" class="site-nav__link current">Портфолио</a>
+            <a href="./portfolio.html" class="site-nav__link current ">Портфолио</a>
           </li>
           <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
         </ul>
@@ -61,10 +68,60 @@
       </ul>
     </div>
   </header>
+  
+
+    <!-- мобильное меню -->
+
+    <div class="mob-menu js-menu-container" id="mob-menu" >
+ 
+      <button class="button-mobmenu close js-close-menu"  type="button">
+        <svg  width="40px" height="40px" >
+          <use href="./images/icons.svg.svg#icon-mobclose"></use>
+        </svg>
+      </button>
+
+      <nav>
+        <ul class="mob-nav">
+
+          <li class="mob-nav__item"><a href="./index.html" class="mob-nav__link  ">Студия</a></li>
+
+          <li class="mob-nav__item">
+            <a href="./portfolio.html" class="mob-nav__link current w">Портфолио</a>
+          </li>
+          <li class="mob-nav__item"><a href="#" class="mob-nav__link">Контакты</a></li>
+        </ul>
+
+        <ul class="contacts">
+          <li class=" contacts__item ">
+            <a href="+380961111111" class="contacts__tel">+38 096 111 11 11</a>
+          </li>
+          <li class=" contacts__item ">
+
+            <a href="info@devstudio.com" class="contacts__info">info@devstudio.com</a>
+          </li>
+        </ul>
+
+        <ul class="mob-media">
+        <li class="mob-media__item">
+          <a href="#" class="mob-media__link">Instagram</a>
+        </li>
+        <li class="mob-media__item">
+          <a href="#" class="mob-media__link sol">Twitter</a>
+        </li>
+        <li class="mob-media__item">
+          <a href="#" class="mob-media__link sol">Facebook</a>
+        </li>
+        <li class="mob-media__item">
+          <a href="#" class="mob-media__link sol">LinkedIn</a>
+        </li>
+      </ul>
+        
+      </nav>
+    </div>
   <!-- проекти -->
   <main>
     <section class="section-project">
-      <div class="section-project__conteiner">
+      <div class="section-project container">
         <h1 class="secret">Проекти компании</h1>
         <!-- фильтр -->
         <div>
@@ -102,7 +159,11 @@
 
               <div class="cards__effect">
 
-                <img src="images/img4.jpg" alt="пример веб сайта" width="370" />
+                <img srcset="
+
+                ./images/proj.370x294.jpg 1x, 
+                ./images/proj.740x588.jpg 2x"
+                src="./images/proj.370x294.jpg" alt="пример веб сайта"  />
                 <div class="cards__textBox">
 
                   <p class="cards__text ">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -116,7 +177,7 @@
               <div class="cards__border">
                 <h2 class="cards__title">Технокряк</h2>
 
-                <p class="cards__description">Веб-сайт</p>
+                <p class="cards__description tablet">Веб-сайт</p>
 
               </div>
             </a>
@@ -125,7 +186,12 @@
           <li class="cards">
             <a href="#" class="cards__link">
               <div class="cards__effect">
-                <img src="images/img5.jpg" alt="пример веб сайта" width="370" />
+                <img srcset="
+
+                ./images/proj2.370x294.jpg 1x, 
+                ./images/proj2.740x588.jpg 2x"
+
+                src="./images/proj2.370x294.jpg" alt="пример веб сайта" />
                 <div class="cards__textBox">
 
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -147,7 +213,12 @@
           <li class="cards">
             <a href="#" class="cards__link">
               <div class="cards__effect">
-                <img src="images/seafood.jpg" alt="пример веб сайта" width="370" />
+                <img srcset="
+
+                ./images/proj3.370x294.jpg 1x, 
+                ./images/proj3.740x588.jpg 2x"
+
+                src=" ./images/proj3.370x294.jpg" alt="пример веб сайта"  />
                 <div class="cards__textBox">
 
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -168,7 +239,12 @@
           <li class="cards">
             <a href="#" class="cards__link">
               <div class="cards__effect">
-                <img src="images/img7.jpg" alt="пример веб сайта" width="370" />
+                <img  srcset="
+
+                ./images/proj4.370x294.jpg 1x, 
+                ./images/proj4.740x588.jpg 2x"
+
+                src=" ./images/proj4.370x294.jpg" alt="пример веб сайта" />
                 <div class="cards__textBox">
 
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -191,7 +267,12 @@
             <a href="#" class="cards__link">
               <div class="cards__effect">
 
-                <img src="images/img8.jpg" alt="пример веб сайта" width="370" />
+                <img  srcset="
+
+                ./images/proj5.370x294.jpg 1x, 
+                ./images/proj5.740x588.jpg 2x"
+
+                src=" ./images/proj5.370x294.jpg" alt="пример веб сайта" />
                 <div class="cards__textBox">
 
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -212,7 +293,12 @@
           <li class="cards">
             <a href="#" class="cards__link">
               <div class="cards__effect">
-                <img src="images/img9.jpg" alt="пример веб сайта" width="370" />
+                <img  srcset="
+
+                ./images/proj6.370x294.jpg 1x, 
+                ./images/proj6.740x588.jpg 2x"
+
+                src="  ./images/proj6.370x294.jpg" alt="пример веб сайта"  />
                 <div class="cards__textBox">
 
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -233,7 +319,12 @@
           <li class="cards">
             <a href="#" class="cards__link">
               <div class="cards__effect">
-                <img src="images/img10.jpg" alt="пример веб сайта" width="370" />
+                <img  srcset="
+
+                ./images/proj7.370x294.jpg 1x, 
+                ./images/proj7.740x588.jpg 2x"
+                
+                src="./images/proj7.370x294.jpg" alt="пример веб сайта" />
                 <div class="cards__textBox">
 
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -254,7 +345,12 @@
           <li class="cards">
             <a href="#" class="cards__link">
               <div class="cards__effect">
-                <img src="images/img11.jpg" alt="пример веб сайта" width="370" />
+                <img  srcset="
+
+                ./images/proj8.370x294.jpg 1x, 
+                ./images/proj8.740x588.jpg 2x"
+
+                src="./images/proj8.370x294.jpg" alt="пример веб сайта"  />
                 <div class="cards__textBox">
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -274,7 +370,12 @@
           <li class="cards">
             <a href="#" class="cards__link">
               <div class="cards__effect">
-                <img src="images/img12.jpg" alt="пример веб сайта" width="370" />
+                <img srcset="
+
+                ./images/proj9.370x294.jpg 1x, 
+                ./images/proj9.740x588.jpg 2x"
+
+                src="./images/proj9.370x294.jpg" alt="пример веб сайта" />
                 <div class="cards__textBox">
 
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -371,6 +472,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

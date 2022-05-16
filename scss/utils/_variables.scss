@@ -53,11 +53,13 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height:auto;
 }
 
 body {
-  @media screen and (max-width: 768px) {
-    padding-top: 0;
+  @media screen and (max-width: 767px) {
+    padding-top: 60px;
   }
   padding-top: 80px;
   background-color: $primary-Wcolor;
@@ -70,28 +72,33 @@ body {
 
 .section {
   text-align: center;
+  @media screen and (max-width: 1200px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   padding-top: 95px;
   padding-bottom: 95px;
 }
 
 
 .container{
+ 
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-
   @media screen and (min-width: 480px) {
-    width: 480px;
+    width:480px;
+
   }
 
   @media screen and (min-width: 768px) {
-    width: 768px;
+    width:768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width:1200px;
   }
 
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-  }
 }
 
 
