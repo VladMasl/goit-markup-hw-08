@@ -504,7 +504,6 @@ body {
 
 @media screen and (max-width: 480px) {
   .heroes {
-    background-size: cover;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../images/Header-mob.480x400.jpg);
   }
 }
@@ -551,6 +550,19 @@ body {
   .heroes {
     background-size: cover;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../images/Heder-desk.3200x1200.jpg);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heroes {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../images/Header-mob.480x400.jpg);
+  }
+}
+
+@media screen and (max-width: 480px) and (min-device-pixel-ratio: 2), screen and (max-width: 480px) and (-moz-min-device-pixel-ratio: 2), screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 480px) and (min-resolution: 192dpi), screen and (max-width: 480px) and (min-resolution: 2dppx) {
+  .heroes {
+    background-size: cover;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../images/Header-mob.960x800.jpg);
   }
 }
 
