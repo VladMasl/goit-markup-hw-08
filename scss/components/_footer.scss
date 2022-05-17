@@ -192,8 +192,15 @@ fill: $primary-Wcolor;
         margin-bottom: 20px;    
     }
 
-    @media screen and (min-width: 300px)and (max-width: 479px){
+    @media screen and (min-width: 250px)and (max-width: 479px){
+
         width: 300px;
+
+        @media screen and (max-width: 249px){
+            
+            width: 240px;
+        }
+    
     }
 
  padding: 15px 16px;

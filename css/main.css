@@ -658,6 +658,12 @@ body {
   }
 }
 
+@media screen and (max-width: 767px) and (max-width: 450px) {
+  .peculiarities__description {
+    width: 275px;
+  }
+}
+
 @media screen and (max-width: 767px) and (min-width: 300px) and (max-width: 479px) {
   .peculiarities__description {
     width: 345px;
@@ -1559,9 +1565,15 @@ footer {
   }
 }
 
-@media screen and (min-width: 300px) and (max-width: 479px) {
+@media screen and (min-width: 250px) and (max-width: 479px) {
   .subscription__input {
     width: 300px;
+  }
+}
+
+@media screen and (min-width: 250px) and (max-width: 479px) and (max-width: 249px) {
+  .subscription__input {
+    width: 240px;
   }
 }
 
