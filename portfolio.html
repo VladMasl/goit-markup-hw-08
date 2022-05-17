@@ -12,7 +12,7 @@
     rel="stylesheet" />
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
-    
+
   <link rel="stylesheet" href="./css/main.min.css" />
 
 
@@ -27,11 +27,8 @@
       <nav class="header__nav">
 
         <a href="" class="header__logo"><span class="header__web">Web</span>Studio</a>
-        <button class="button-mobmenu js-open-menu" 
-        aria-expanded="false"
-        aria-controls="mob-menu"
-         type="button">
-          <svg  width="40px" height="40px" >
+        <button class="button-mobmenu js-open-menu" aria-expanded="false" aria-controls="mob-menu" type="button">
+          <svg width="40px" height="40px">
             <use href="./images/icons.svg.svg#icon-mobmenu"></use>
           </svg>
         </button>
@@ -68,40 +65,40 @@
       </ul>
     </div>
   </header>
-  
 
-    <!-- мобильное меню -->
 
-    <div class="mob-menu js-menu-container" id="mob-menu" >
- 
-      <button class="button-mobmenu close js-close-menu"  type="button">
-        <svg  width="40px" height="40px" >
-          <use href="./images/icons.svg.svg#icon-mobclose"></use>
-        </svg>
-      </button>
+  <!-- мобильное меню -->
 
-      <nav>
-        <ul class="mob-nav">
+  <div class="mob-menu js-menu-container" id="mob-menu">
 
-          <li class="mob-nav__item"><a href="./index.html" class="mob-nav__link  ">Студия</a></li>
+    <button class="button-mobmenu close js-close-menu" type="button">
+      <svg width="40px" height="40px">
+        <use href="./images/icons.svg.svg#icon-mobclose"></use>
+      </svg>
+    </button>
 
-          <li class="mob-nav__item">
-            <a href="./portfolio.html" class="mob-nav__link current w">Портфолио</a>
-          </li>
-          <li class="mob-nav__item"><a href="#" class="mob-nav__link">Контакты</a></li>
-        </ul>
+    <nav>
+      <ul class="mob-nav">
 
-        <ul class="contacts">
-          <li class=" contacts__item ">
-            <a href="+380961111111" class="contacts__tel">+38 096 111 11 11</a>
-          </li>
-          <li class=" contacts__item ">
+        <li class="mob-nav__item"><a href="./index.html" class="mob-nav__link  ">Студия</a></li>
 
-            <a href="info@devstudio.com" class="contacts__info">info@devstudio.com</a>
-          </li>
-        </ul>
+        <li class="mob-nav__item">
+          <a href="./portfolio.html" class="mob-nav__link current w">Портфолио</a>
+        </li>
+        <li class="mob-nav__item"><a href="#" class="mob-nav__link">Контакты</a></li>
+      </ul>
 
-        <ul class="mob-media">
+      <ul class="contacts">
+        <li class=" contacts__item ">
+          <a href="+380961111111" class="contacts__tel">+38 096 111 11 11</a>
+        </li>
+        <li class=" contacts__item ">
+
+          <a href="info@devstudio.com" class="contacts__info">info@devstudio.com</a>
+        </li>
+      </ul>
+
+      <ul class="mob-media">
         <li class="mob-media__item">
           <a href="#" class="mob-media__link">Instagram</a>
         </li>
@@ -115,9 +112,9 @@
           <a href="#" class="mob-media__link sol">LinkedIn</a>
         </li>
       </ul>
-        
-      </nav>
-    </div>
+
+    </nav>
+  </div>
   <!-- проекти -->
   <main>
     <section class="section-project">
@@ -161,9 +158,21 @@
 
                 <img srcset="
 
-                ./images/proj.370x294.jpg 1x, 
-                ./images/proj.740x588.jpg 2x"
-                src="./images/proj.370x294.jpg" alt="пример веб сайта"  />
+              ./images/projT.jpg 354w,
+
+              ./images/proj.370x294.jpg 370w,
+                
+            ./images/projM.jpg 450w,
+
+            ./images/projT.jpg 708w,
+
+            ./images/proj.740x588.jpg 740w,
+
+            ./images/projM.jpg  900w
+            " src="./images/projM.jpg 450w," alt="фото сотрудника"
+
+                  sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (max-width:480px) 450px, 100vw" />
+
                 <div class="cards__textBox">
 
                   <p class="cards__text ">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -188,10 +197,20 @@
               <div class="cards__effect">
                 <img srcset="
 
-                ./images/proj2.370x294.jpg 1x, 
-                ./images/proj2.740x588.jpg 2x"
-
-                src="./images/proj2.370x294.jpg" alt="пример веб сайта" />
+                ./images/projT1.jpg 354w,
+  
+                ./images/proj1.370x294.jpg 370w,
+                  
+              ./images/projM1.jpg 450w,
+  
+              ./images/projT1.jpg 708w,
+  
+              ./images/proj1.740x588.jpg 740w,
+  
+              ./images/projM1.jpg  900w
+              " src="./images/projM1.jpg 450w" alt="фото сотрудника"
+  
+                    sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (max-width:480px) 450px, 100vw" />
                 <div class="cards__textBox">
 
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -215,10 +234,21 @@
               <div class="cards__effect">
                 <img srcset="
 
-                ./images/proj3.370x294.jpg 1x, 
-                ./images/proj3.740x588.jpg 2x"
+                ./images/projT2.jpg 354w,
+  
+                ./images/proj2.370x294.jpg 370w,
+                  
+              ./images/projM2.jpg 450w,
+  
+              ./images/projT2.jpg 708w,
+  
+              ./images/proj2.740x588.jpg 740w,
+  
+              ./images/projM2.jpg  900w
+              " src="./images/projM2.jpg 450w" alt="фото сотрудника"
+  
+                    sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (max-width:480px) 450px, 100vw" />
 
-                src=" ./images/proj3.370x294.jpg" alt="пример веб сайта"  />
                 <div class="cards__textBox">
 
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -239,12 +269,23 @@
           <li class="cards">
             <a href="#" class="cards__link">
               <div class="cards__effect">
-                <img  srcset="
+                <img srcset="
 
-                ./images/proj4.370x294.jpg 1x, 
-                ./images/proj4.740x588.jpg 2x"
-
-                src=" ./images/proj4.370x294.jpg" alt="пример веб сайта" />
+                ./images/projT3.jpg 354w,
+  
+                ./images/proj3.370x294.jpg 370w,
+                  
+              ./images/projM3.jpg 450w,
+  
+              ./images/projT3.jpg 708w,
+  
+              ./images/proj3.740x588.jpg 740w,
+  
+              ./images/projM3.jpg  900w
+              "
+               src="./images/projM3.jpg 450w" alt="фото сотрудника"
+  
+                    sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (max-width:480px) 450px, 100vw" />
                 <div class="cards__textBox">
 
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -267,12 +308,23 @@
             <a href="#" class="cards__link">
               <div class="cards__effect">
 
-                <img  srcset="
+                <img srcset="
 
-                ./images/proj5.370x294.jpg 1x, 
-                ./images/proj5.740x588.jpg 2x"
-
-                src=" ./images/proj5.370x294.jpg" alt="пример веб сайта" />
+                ./images/projT4.jpg 354w,
+  
+                ./images/proj4.370x294.jpg 370w,
+                  
+              ./images/projM4.jpg 450w,
+  
+              ./images/projT4.jpg 708w,
+  
+              ./images/proj4.740x588.jpg 740w,
+  
+              ./images/projM4.jpg  900w
+              " 
+              src="./images/projM4.jpg 450w" alt="фото сотрудника"
+  
+                    sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (max-width:480px) 450px, 100vw" />
                 <div class="cards__textBox">
 
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -293,12 +345,23 @@
           <li class="cards">
             <a href="#" class="cards__link">
               <div class="cards__effect">
-                <img  srcset="
+                <img srcset="
 
-                ./images/proj6.370x294.jpg 1x, 
-                ./images/proj6.740x588.jpg 2x"
-
-                src="  ./images/proj6.370x294.jpg" alt="пример веб сайта"  />
+                ./images/projT5.jpg 354w,
+  
+                ./images/proj5.370x294.jpg 370w,
+                  
+              ./images/projM5.jpg 450w,
+  
+              ./images/projT5.jpg 708w,
+  
+              ./images/proj5.740x588.jpg 740w,
+  
+              ./images/projM5.jpg  900w
+              " 
+              src="./images/projM5.jpg 450w" alt="фото сотрудника"
+  
+                    sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (max-width:480px) 450px, 100vw" />
                 <div class="cards__textBox">
 
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -319,12 +382,22 @@
           <li class="cards">
             <a href="#" class="cards__link">
               <div class="cards__effect">
-                <img  srcset="
+                <img srcset="
 
-                ./images/proj7.370x294.jpg 1x, 
-                ./images/proj7.740x588.jpg 2x"
-                
-                src="./images/proj7.370x294.jpg" alt="пример веб сайта" />
+                ./images/projT6.jpg 354w,
+  
+                ./images/proj6.370x294.jpg 370w,
+                  
+              ./images/projM6.jpg 450w,
+  
+              ./images/projT6.jpg 708w,
+  
+              ./images/proj6.740x588.jpg 740w,
+  
+              ./images/projM6.jpg  900w
+              " src="./images/projM6.jpg 450w" alt="фото сотрудника"
+  
+                    sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (max-width:480px) 450px, 100vw" />
                 <div class="cards__textBox">
 
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -345,12 +418,23 @@
           <li class="cards">
             <a href="#" class="cards__link">
               <div class="cards__effect">
-                <img  srcset="
+                <img srcset="
 
-                ./images/proj8.370x294.jpg 1x, 
-                ./images/proj8.740x588.jpg 2x"
-
-                src="./images/proj8.370x294.jpg" alt="пример веб сайта"  />
+                ./images/projT7.jpg 354w,
+  
+                ./images/proj7.370x294.jpg 370w,
+                  
+              ./images/projM7.jpg 450w,
+  
+              ./images/projT7.jpg 708w,
+  
+              ./images/proj7.740x588.jpg 740w,
+  
+              ./images/projM7.jpg  900w
+              " 
+              src="./images/projM7.jpg 450w" alt="фото сотрудника"
+  
+                    sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (max-width:480px) 450px, 100vw" />
                 <div class="cards__textBox">
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -372,10 +456,20 @@
               <div class="cards__effect">
                 <img srcset="
 
-                ./images/proj9.370x294.jpg 1x, 
-                ./images/proj9.740x588.jpg 2x"
-
-                src="./images/proj9.370x294.jpg" alt="пример веб сайта" />
+                ./images/projT8.jpg 354w,
+  
+                ./images/proj8.370x294.jpg 370w,
+                  
+              ./images/projM8.jpg 450w,
+  
+              ./images/projT8.jpg 708w,
+  
+              ./images/proj8.740x588.jpg 740w,
+  
+              ./images/projM8.jpg  900w
+              " src="./images/projM8.jpg 450w" alt="фото сотрудника"
+  
+                    sizes="(min-width:1200px) 370px, (min-width:768px) 354px, (max-width:480px) 450px, 100vw" />
                 <div class="cards__textBox">
 
                   <p class="cards__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и
