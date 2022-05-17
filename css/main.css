@@ -349,16 +349,16 @@ body {
   margin-right: 15px;
 }
 
+.adaptiv {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .mob-nav {
   display: inline-flex;
   flex-direction: column;
-  margin-bottom: 306px;
-}
-
-@media screen and (max-width: 400px) {
-  .mob-nav {
-    margin-bottom: 230px;
-  }
 }
 
 .mob-nav__item:not(:last-child) {
@@ -474,6 +474,10 @@ body {
 
 .mob-media__link:hover, .mob-media__link:focus {
   color: #006eff;
+}
+
+.active {
+  color: #2196f3;
 }
 
 .sol {
@@ -690,9 +694,6 @@ body {
   .peculiarities__description {
     width: 270px;
   }
-  .peculiarities__description:not(:last-child) {
-    margin-right: 30px;
-  }
 }
 
 .peculiarities__decor {
@@ -804,6 +805,14 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+@media screen and (max-width: 1200px) {
+  .team__title {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
 }
 
 .team__list {
@@ -939,6 +948,14 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+@media screen and (max-width: 1200px) {
+  .clients__title {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
 }
 
 .clients__list {
