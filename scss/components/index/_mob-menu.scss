@@ -137,6 +137,9 @@
     @media screen and (max-width: 400px) {
       font-size: 33px;
     }
+    @media screen and (max-width: 360px) {
+      font-size: 29px;
+    }
 
     text-decoration: none;
     font-weight: 500;
@@ -160,6 +163,10 @@
   position: relative;
   @media screen and (max-width: 420px) {
     font-size: 15px;
+  }
+
+  @media screen and (max-width: 360px) {
+    font-size: 12px;
   }
 
   text-decoration: none;
