@@ -1,0 +1,156 @@
+.heroes {
+  @media screen and(max-width: 480px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)
+      ),
+      url(../images/Header-mob.480x400.jpg);
+
+    @include mq(retina) {
+      background-size: cover;
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.25)
+        ),
+        url(../images/Header-mob.960x800.jpg);
+    }
+  }
+
+  max-height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-color: $primary-Bcolor;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url(../images/Header-tab.768x400.jpg);
+
+  @include mq(retina) {
+    background-size: cover;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)
+      ),
+      url(../images/Header-tab.1536x800.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    max-height: 400px;
+    background-size: cover;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)
+      ),
+      url(../images/Heder-desk.1600x600.jpg);
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.25)
+        ),
+        url(../images/Heder-desk.3200x1200.jpg);
+    }
+  }
+
+  @media screen and(min-width: 1200px) {
+    max-height: 600px;
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)
+      ),
+      url(../images/Heder-desk.1600x600.jpg);
+    @include mq(retina) {
+      background-size: cover;
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.25)
+        ),
+        url(../images/Heder-desk.3200x1200.jpg);
+    }
+  }
+
+  @media screen and(max-width: 480px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)
+      ),
+      url(../images/Header-mob.480x400.jpg);
+
+    @include mq(retina) {
+      background-size: cover;
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.25)
+        ),
+        url(../images/Header-mob.960x800.jpg);
+    }
+  }
+
+  &__section {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__header {
+    @media screen and (max-width: 1199px) {
+      font-size: 26px;
+      line-height: 42px;
+    }
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.4;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $primary-Wcolor;
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    display: inline-block;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 32px;
+    box-sizing: border-box;
+    align-items: center;
+    color: $primary-Wcolor;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition-property: background-color;
+    transition-duration: $transition;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: rgb(0, 110, 255);
+    }
+  }
+}
